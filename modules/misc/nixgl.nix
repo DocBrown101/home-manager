@@ -186,7 +186,7 @@ in {
       # the outputs and derivation attributes.
         (pkg.overrideAttrs (old: {
           #name = "nixGL-${pkg.name}";
-          name = old.pname;
+          name = pkg.name;
 
           # Make sure this is false for the wrapper derivation, so nix doesn't expect
           # a new debug output to be produced. We won't be producing any debug info
