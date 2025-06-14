@@ -61,11 +61,13 @@ let
       ./programs/aerc.nix
       ./programs/aerospace.nix
       ./programs/afew.nix
+      ./programs/aichat.nix
       ./programs/alacritty.nix
       ./programs/alot.nix
       ./programs/antidote.nix
       ./programs/anyrun.nix
       ./programs/aria2.nix
+      ./programs/ashell.nix
       ./programs/astroid.nix
       ./programs/atuin.nix
       ./programs/autojump.nix
@@ -91,6 +93,7 @@ let
       ./programs/chromium.nix
       ./programs/clock-rs.nix
       ./programs/cmus.nix
+      ./programs/codex.nix
       ./programs/command-not-found/command-not-found.nix
       ./programs/comodoro.nix
       ./programs/darcs.nix
@@ -173,6 +176,7 @@ let
       ./programs/lapce.nix
       ./programs/lazydocker.nix
       ./programs/lazygit.nix
+      ./programs/lazysql.nix
       ./programs/ledger.nix
       ./programs/less.nix
       ./programs/lesspipe.nix
@@ -186,6 +190,7 @@ let
       ./programs/mangohud.nix
       ./programs/matplotlib.nix
       ./programs/mbsync.nix
+      ./programs/mc.nix
       ./programs/mcfly.nix
       ./programs/meli.nix
       ./programs/mercurial.nix
@@ -209,6 +214,7 @@ let
       ./programs/newsboat.nix
       ./programs/nh.nix
       ./programs/nheko.nix
+      ./programs/niriswitcher.nix
       ./programs/nix-index.nix
       ./programs/nix-init.nix
       ./programs/nix-your-shell.nix
@@ -217,6 +223,7 @@ let
       ./programs/notmuch.nix
       ./programs/numbat.nix
       ./programs/nushell.nix
+      ./programs/nyxt.nix
       ./programs/obs-studio.nix
       ./programs/obsidian.nix
       ./programs/octant.nix
@@ -400,6 +407,7 @@ let
       ./services/linux-wallpaperengine.nix
       ./services/listenbrainz-mpd.nix
       ./services/lorri.nix
+      ./services/ludusavi.nix
       ./services/lxqt-policykit-agent.nix
       ./services/macos-remap-keys
       ./services/mako.nix
