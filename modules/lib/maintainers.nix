@@ -45,7 +45,7 @@
   };
   aguirre-matteo = {
     name = "aguirre-matteo";
-    email = "aguirre.matteo.nix@gmail.com";
+    email = "aguirre.matteo@proton.me";
     github = "aguirre-matteo";
     githubId = 158215792;
   };
@@ -193,6 +193,14 @@
     email = "44864658+danjujan@users.noreply.github.com";
     github = "danjujan";
     githubId = 44864658;
+  };
+  delafthi = {
+    name = "Thierry Delafontaine";
+    email = "delafthi@pm.me";
+    matrix = "@delafthi:matrix.org";
+    github = "delafthi";
+    githubId = 50531499;
+    keys = [ { fingerprint = "6DBB 0BB9 AEE6 2C2A 8059  7E1C 0092 6686 9818 63CB"; } ];
   };
   Dines97 = {
     name = "Denis Kaynar";
@@ -356,6 +364,12 @@
     github = "jrobsonchase";
     githubId = 1553581;
     name = "Josh Robson Chase";
+  };
+  justdeeevin = {
+    email = "devin.droddy@gmail.com";
+    github = "justdeeevin";
+    githubId = 90054389;
+    name = "Devin Droddy";
   };
   justinlovinger = {
     name = "Justin Lovinger";
@@ -828,6 +842,12 @@
     github = "tomodachi94";
     githubId = 68489118;
     name = "tomodachi94";
+  };
+  vortriz = {
+    name = "Rishi Vora";
+    email = "vorarishi22+nix@gmail.com";
+    github = "Vortriz";
+    githubId = 97402159;
   };
   wcarlsen = {
     name = "Willi Carlsen";

@@ -7,6 +7,7 @@ let
     # keep-sorted start case=no numeric=yes
     "aerc"
     "aerospace"
+    "aichat"
     "alacritty"
     "alot"
     "antidote"
@@ -28,6 +29,7 @@ let
     "cava"
     "clock-rs"
     "cmus"
+    "codex"
     "comodoro"
     "darcs"
     "delta"
@@ -108,6 +110,7 @@ let
     "notmuch"
     "npth"
     "nushell"
+    "nyxt"
     "oh-my-posh"
     "ollama"
     "onlyoffice-desktopeditors"
