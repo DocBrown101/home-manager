@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-6f428da6.js";
+            window.path_to_searchindex_js = "searchindex-04984770.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-a22c24be.js"></script>
@@ -11034,6 +11034,29 @@ one of “gui”, “user”</p>
 </code></pre>
 <p><em>Example:</em></p>
 <pre><code class="language-nix">"user"
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix">&lt;home-manager/modules/launchd/default.nix&gt;</a></li>
+</ul>
+<h2 id="opt-launchd.agents._name_.waitForNixStore"><a class="header" href="#opt-launchd.agents._name_.waitForNixStore">launchd.agents.&lt;name&gt;.waitForNixStore</a></h2>
+<p>Whether to start the agent through a <code>/bin/sh</code> wrapper that waits
+for the Nix store to be mounted before running the agent’s
+command. This guards against launchd starting the agent before
+the Nix store volume is available, for example early during login
+when the store volume is encrypted.</p>
+<p>When disabled, the agent’s command is run through a launcher
+script named after the agent instead. This makes the agent appear
+under its own name, rather than as “sh”, in System Settings &gt;
+Login Items &amp; Extensions, but the agent will fail to start if
+launchd runs it before the Nix store is mounted.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">false
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -24407,17 +24430,19 @@ attribute set of (Firefox preference (int, bool, string, and also attrs, list, f
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox">&lt;home-manager/modules/programs/firefox&gt;</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.storeId"><a class="header" href="#opt-programs.firefox.profiles._name_.storeId">programs.firefox.profiles.&lt;name&gt;.storeId</a></h2>
-<p>Store ID. Either null, or the first segment of a UUID string.</p>
-<p>If this value is set, then profile.ini is created
-with predictable StoreIDs.</p>
-<p>This is useful to keep the StoreID static,
-which helps to bridge the firefox profiles and the new
-firefox switchable profile implementations.</p>
-<p>This should be set to a string of 8 lowercase hex characters.</p>
+<p>Store ID. Either null, or the first segment of a UUID string (8 lowercase hex characters).</p>
+<p>If this value is set, then profiles.ini is created with predictable StoreIDs.
+‘toolkit.profiles.storeID’ is also set accordingly.</p>
+<p>A predictable StoreID helps bridge the old and new firefox profile implementations.
+The StoreID is the name of the sqlite database in “Profile Groups” holding the new
+profiles’ metadata.</p>
 <p><em>Type:</em>
 null or string matching the pattern [0-9a-f]{8}</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">null
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">"e41de5fe"
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -26459,17 +26484,19 @@ attribute set of (Floorp preference (int, bool, string, and also attrs, list, fl
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix">&lt;home-manager/modules/programs/floorp.nix&gt;</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.storeId"><a class="header" href="#opt-programs.floorp.profiles._name_.storeId">programs.floorp.profiles.&lt;name&gt;.storeId</a></h2>
-<p>Store ID. Either null, or the first segment of a UUID string.</p>
-<p>If this value is set, then profile.ini is created
-with predictable StoreIDs.</p>
-<p>This is useful to keep the StoreID static,
-which helps to bridge the firefox profiles and the new
-firefox switchable profile implementations.</p>
-<p>This should be set to a string of 8 lowercase hex characters.</p>
+<p>Store ID. Either null, or the first segment of a UUID string (8 lowercase hex characters).</p>
+<p>If this value is set, then profiles.ini is created with predictable StoreIDs.
+‘toolkit.profiles.storeID’ is also set accordingly.</p>
+<p>A predictable StoreID helps bridge the old and new firefox profile implementations.
+The StoreID is the name of the sqlite database in “Profile Groups” holding the new
+profiles’ metadata.</p>
 <p><em>Type:</em>
 null or string matching the pattern [0-9a-f]{8}</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">null
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">"e41de5fe"
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -38032,17 +38059,19 @@ attribute set of (LibreWolf preference (int, bool, string, and also attrs, list,
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix">&lt;home-manager/modules/programs/librewolf.nix&gt;</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.storeId"><a class="header" href="#opt-programs.librewolf.profiles._name_.storeId">programs.librewolf.profiles.&lt;name&gt;.storeId</a></h2>
-<p>Store ID. Either null, or the first segment of a UUID string.</p>
-<p>If this value is set, then profile.ini is created
-with predictable StoreIDs.</p>
-<p>This is useful to keep the StoreID static,
-which helps to bridge the firefox profiles and the new
-firefox switchable profile implementations.</p>
-<p>This should be set to a string of 8 lowercase hex characters.</p>
+<p>Store ID. Either null, or the first segment of a UUID string (8 lowercase hex characters).</p>
+<p>If this value is set, then profiles.ini is created with predictable StoreIDs.
+‘toolkit.profiles.storeID’ is also set accordingly.</p>
+<p>A predictable StoreID helps bridge the old and new firefox profile implementations.
+The StoreID is the name of the sqlite database in “Profile Groups” holding the new
+profiles’ metadata.</p>
 <p><em>Type:</em>
 null or string matching the pattern [0-9a-f]{8}</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">null
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">"e41de5fe"
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -63525,9 +63554,9 @@ strings concatenated with “\n”</p>
 <pre><code class="language-nix">""
 </code></pre>
 <p><em>Example:</em></p>
-<pre><code class="language-nix">lib.mkOrder 1200 '''
+<pre><code class="language-nix">lib.mkOrder 1200 ''
   echo "Hello zsh initContent!"
-''';
+'';
 
 </code></pre>
 <p><em>Declared by:</em></p>
@@ -91896,10 +91925,23 @@ session.</p>
 changes are only active if the <code>home.stateVersion</code> option is set to
 “26.11” or later.</p>
 <ul>
-<li>The KDL options under <code>programs.zellij</code> will now correctly escape backslashes
+<li>
+<p>The KDL options under <code>programs.zellij</code> will now correctly escape backslashes
 in string values. For example, the Nix string <code>"\\"</code> will now correctly
 generate the KDL string <code>"\\"</code>. Previously, this would have generated <code>"\"</code>,
-which is invalid KDL. The following options are affected:
+which is invalid KDL. The following options are affected:</p>
+<ul>
+<li><code>programs.zellij.settings</code></li>
+<li><code>programs.zellij.themes</code></li>
+<li><code>programs.zellij.layouts</code></li>
+</ul>
+</li>
+<li>
+<p>The KDL options under <code>programs.zellij</code> will now escape tabs in string
+values. For example, the Nix string <code>"\t"</code> (corresponding to a single tab)
+will now generate the KDL string <code>"\t"</code>. Previously, this would have generated
+<code>"&lt;tab&gt;"</code> (where <code>&lt;tab&gt;</code> denotes a literal tab character). The following
+options are affected:</p>
 <ul>
 <li><code>programs.zellij.settings</code></li>
 <li><code>programs.zellij.themes</code></li>
